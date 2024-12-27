@@ -1,0 +1,206 @@
+.customizePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  padding: 16px;
+  height: calc(100vh - 100px); // Adjust for header (50px) + footer (50px)
+  overflow-y: auto; // Add scroll if content exceeds height
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Space out children
+  overflow: hidden; // Prevent overflow of content
+}
+
+.inputGroup {
+  margin-bottom: 16px;
+
+  .label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+    }
+  }
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #6b7280; // Gray text
+  margin-bottom: 24px;
+}
+
+.inputGroup {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151; // Dark gray text
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db; // Light gray border
+  border-radius: 8px;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: #2563eb; // Blue border on focus
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5); // Blue focus ring
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: #2563eb; // Blue background
+    border-color: #2563eb;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.button {
+  display: flex; // Ensures children (like text or icons) are treated as flex items
+  align-items: center; // Centers vertically
+  justify-content: center; // Centers horizontally
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1d4ed8;
+  }
+}
+
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 1px solid #e5e7eb; // Light gray border
+  border-radius: 8px;
+  background-color: #f9fafb; // Slightly gray background
+}
+
+.paymentOptions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.paymentButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e5e7eb;
+  }
+}
+
+.payButton {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.paypal {
+    background-color: #ffc107; // PayPal yellow
+    color: black;
+
+    &:hover {
+      background-color: #e0a800;
+    }
+  }
+
+  &.card {
+    background-color: white;
+    border: 1px solid #d1d5db; // Light gray border
+    color: #374151;
+
+    &:hover {
+      background-color: #f9fafb;
+    }
+  }
+}
